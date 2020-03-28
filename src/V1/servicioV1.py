@@ -11,7 +11,7 @@ class ServiceForecasting:
     
     def __init__(self):
         # Generamos el dataframe con 1000 entradas de la base de datos
-        self.engine = create_engine('mysql+pymysql://miguel:miguel@localhost/forecast')
+        self.engine = create_engine('mysql+pymysql://miguel:miguel@db/forecast')
         self.df = self.engine.execute("SELECT * FROM forecast LIMIT 1000").fetchall()
         self.df = pd.DataFrame(data=self.df)
 

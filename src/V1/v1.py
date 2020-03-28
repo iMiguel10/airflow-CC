@@ -14,8 +14,6 @@ app = Flask(__name__)
 def inicio(n):
 	return jsonify(service.predict(n)),200
 
-
-
 # Ruta que devuelve status OK
 @app.route('/servicio/v1/status', methods = ['GET'])
 def status():
