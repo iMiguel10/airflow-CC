@@ -3,3 +3,4 @@ gunicorn
 pmdarima
 pandas
 sqlalchemy
+pymysql
