@@ -57,5 +57,4 @@ class ServiceForecasting:
             s += '{"hour" : "'+str(hours[i%24])+'","temp": '+str(fc_T[i])+',"hum": '+str(fc_H[i])+'}'
             if i != n_periods-1: s+=","
         s += ']}'
-        print(s)
         return json.loads(s)
