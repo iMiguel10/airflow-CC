@@ -10,9 +10,9 @@ class ServiceForecasting:
     
     def __init__(self):
         # 
-        r = requests.get('https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/18087',headers=headers)
+        r = requests.get('https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/18087', verify=False, headers=headers)
         p = r.json()
-        data_request = requests.get(p["datos"])
+        data_request = requests.get(p["datos"], verify=False)
         self.data = data_request.json()
 
     def predict(self, n_periods):
