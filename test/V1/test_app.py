@@ -18,6 +18,6 @@ def client():
     yield client
 
 def test_status(client):
-    rv = client.get('/status')
+    rv = client.get('/servicio/v1/status')
     json_data = rv.get_json()
     assert json_data['status']=="OK" and rv.status_code == 200
